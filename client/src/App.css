@@ -1,0 +1,107 @@
+body {
+  background-color: antiquewhite;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  background-color: antiquewhite;
+  padding: 10px 5px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.sidebar {
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 10px 50px;
+}
+
+.dashboard {
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 10px 10px;
+}
+
+.top-part {
+  display: flex;
+}
+
+.top-part div {
+  padding: 10px 10px;
+  margin: 0px 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+.dashboard-inner {
+  border: 1px solid rgba(250, 235, 235, 0.266);
+  width: 279px;
+  height: 300px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: aliceblue;
+  }
+
+.dashboard-inner span {
+  display : flex;
+  justify-content: center;
+}
+
+.dashboard-inner span p {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.dashboard-inner img {
+  width: 30%;
+  height: auto;
+}
+
+.bot-inner {
+  width: auto;
+  height: auto;
+  margin: 10px 20px;
+}
+
+.whole-dashboard {
+  background-color: aquamarine;
+  border: 1px solid black;
+  flex-wrap: wrap;
+  justify-content: center;
+}
