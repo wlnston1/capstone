@@ -1,7 +1,8 @@
-import React from "react";
-
+import React, { useState } from "react";
 import Employee from "../Employee";
 import InfoBox from "../InfoBox";
+import StatBox from "../StatBox";
+import Flag from "../Flag";
 
 function Contact() {
 
