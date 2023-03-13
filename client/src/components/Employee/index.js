@@ -54,7 +54,7 @@ function Employee({ user }) {
                     </button>
                   </Link>
                   <Link to={`/api/contact/${user._id}`}>
-                    <button className="btn btn-info mx-4 my-2">select</button>
+                    <button className="btn btn-info mx-4 my-2">Select</button>
                   </Link>
                 </div>
               </div>

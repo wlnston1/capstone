@@ -4,6 +4,7 @@ function InfoBox() {
   return (
     <div>
       <div className="top-part">
+        
         {/* <p>{user.phone}</p>
                 <p>{user.age}</p>
                 <p>{user.city}</p>
