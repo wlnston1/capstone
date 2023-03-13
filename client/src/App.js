@@ -19,6 +19,7 @@ function App() {
           <Route path="/" exact element={<Dashboard />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/service" element={<Services />} />
+          <Route path="/service" element={<Services />} />
           <Route path="*" element={<p>Path not resolved</p>} />
         </Routes>
       </Router>
