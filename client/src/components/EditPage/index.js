@@ -1,14 +1,19 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 function EditPage() {
   const { userId } = useParams();
-  const [user, setUser] = useState({userName: "", email: "", experience: 0, age: 0, phone: 0, country: ""});
+  const [user, setUser] = useState({userName: "", email: "", experience: "", age: "", phone: "", country: ""});
   const [oldUser, setOldUser] = useState(null);
+  
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    setUser({ ...user, [name]: value });
+    setUser((oldUser) => ({
+      ...oldUser,
+      [name]: value
+    }));
   };
 
   const loadUser = async () => {
@@ -23,16 +28,10 @@ function EditPage() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-
-    fetch(`http://localhost:8888/api/contact/${userId}`, {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(user),
-    })
-      .then((response) => response.json())
+axios.put(`http://localhost:8888/api/contact/${userId}`, (user))
+      .then((response) => console.log(response.data))
       .then((data) => {
-         
+          setUser(data);
           console.log("Success:", data);
       })
       .catch((error) => console.error(error));
@@ -63,6 +62,8 @@ function EditPage() {
             <input
               className="form-control"
               type="text"
+              name="userName"
+              value={user?.userName}
               onChange={handleInputChange}
             />
           </div>
@@ -72,15 +73,20 @@ function EditPage() {
             <input
               className="form-control"
               type="email"
+              name="email"
+              value={user?.email}
               onChange={handleInputChange}
             />
           </div>
 
-          <div className="">
+        
+ <div className="">
             <label>Age:</label>
             <input
               className="form-control"
               type="text"
+              name="age"
+              value={user?.age}
               onChange={handleInputChange}
             />
           </div>
@@ -89,6 +95,8 @@ function EditPage() {
             <label>Phone:</label>
             <input
               className="form-control"
+              value={user?.phone}
+              name="phone"
               type="text"
               onChange={handleInputChange}
             />
@@ -98,6 +106,8 @@ function EditPage() {
             <label>Experience:</label>
             <input
               className="form-control"
+              value={user?.experience}
+              name="experience"
               type="text"
               onChange={handleInputChange}
             />
@@ -106,6 +116,8 @@ function EditPage() {
           <div className="">
             <label>Country:</label>
             <input
+              value={user?.country}
+              name="country"
               className="form-control"
               type="text"
               onChange={handleInputChange}
