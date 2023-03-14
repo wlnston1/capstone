@@ -38,7 +38,7 @@ function Employee({ onSelectId, onContactStat, onFlag }) {
       <div className="employee">
         <div className="employee-inner row my-2">
           <div  className="col col-4">
-            <h4 style={{marginLeft:"-40px"}}>Name</h4>
+            <h3 style={{marginLeft:"-40px"}}>Name</h3>
           </div>
           <div className="col col-3">
             <h4>Email</h4>
