@@ -4,11 +4,10 @@ body {
 
 .App {
   text-align: center;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   margin-top: 10%;
   background-color: antiquewhite;
-  padding: 10px 5px;
 }
 
 .App-logo {
@@ -50,6 +49,7 @@ body {
   background-color: aliceblue;
   border-radius: 10px;
   padding: 10px 50px;
+  border: 1px solid black;
 }
 
 .dashboard {
@@ -58,12 +58,7 @@ body {
   padding: 10px 10px;
 }
 
-.top-part {
-  display: flex;
-}
-
 .top-part div {
-  padding: 10px 10px;
   margin: 0px 20px;
   justify-content: center;
   text-align: center;
@@ -96,7 +91,6 @@ body {
 .contact-inner {
   border: 1px solid rgba(250, 235, 235, 0.266);
   width: 279px;
-  height: 130px;
   text-align: center;
   border-radius: 10px;
   background-color: aliceblue;
@@ -115,10 +109,9 @@ body {
   justify-content: center;
 }
 
-/* .employee-inner {
-  vertical-align: middle;
-  border-bottom: "1px solid black";
-} */
+.info-sec .contact-inner {
+  border: 1px solid black;
+}
 
 .employee-inner h4, .employee-inner p {
   
