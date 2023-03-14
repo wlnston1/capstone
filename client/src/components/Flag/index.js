@@ -4,8 +4,8 @@ function Flag({ flag }) {
   return (
     <div>
       {flag ? (
-        <div className="mt-4">
-          <img className="w-50"
+        <div className="mt-4 text-center">
+          <img className="mx-auto block w-50"
             src={`https://cdn.jsdelivr.net/gh/hampusborgos/country-flags@main/svg/${flag}.svg`}
             alt="flag"
           />
