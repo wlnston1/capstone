@@ -1,26 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Sidebar() {
   return (
     <nav>
       <h4>
-        <Link to="/">Dashboard </Link>
+        <NavLink exact to="/contact" activeClassName="bg-gray-200">
+          Manage Team
+        </NavLink>
       </h4>
       <h4>
-        <Link to="/contact">Contact </Link>
+        <NavLink exact to="/" activeClassName="bg-gray-200">
+          Add Employee
+        </NavLink>
       </h4>
       <h4>
-        <Link to="/service"> Service </Link>
+        <NavLink exact to="/edit/0" activeClassName="bg-gray-200">
+          Edit Employees
+        </NavLink>
       </h4>
-      
-      {/* 
-      <h4>
-        <Link to="/">Dashboard </Link>
-      </h4>
-      <h4>
-        <Link to="/">Dashboard </Link>
-      </h4> */}
     </nav>
   );
 }
