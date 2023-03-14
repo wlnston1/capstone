@@ -4,14 +4,16 @@ const contactModel = require("./schemas/contact");
 
 // Get all posts
 router.post("/contact", async (req, res) => {
+  console.log("here");
+  console.log(req.body);
   try {
-    const { userName, email, age, phone, city, country } = req.body;
+    const { userName, email, age, phone, experience, country } = req.body;
     const newContact = new contactModel({
       userName,
       email,
       age,
       phone,
-      city,
+      experience,
       country,
     });
     const savedContact = await newContact.save();
@@ -44,10 +46,10 @@ router.get("/contact/:id", async (req, res) => {
 // Update 1 contact
 router.put("/contact/:id", async (req, res) => {
   try {
-    const { userName, email, age, phone, city, country } = req.body;
+    const { userName, email, age, phone, experience, country } = req.body;
     const updatedContact = await contactModel.findByIdAndUpdate(
       req.params.id,
-      { userName, email, age, phone, city, country },
+      { userName, email, age, phone, experience, country },
       { new: true }
     );
     if (!updatedContact) {
@@ -59,6 +61,7 @@ router.put("/contact/:id", async (req, res) => {
   }
 });
 
+// Delete 1 contact
 router.delete("/contact/:id", async (req, res) => {
   try {
     const deletedContact = await contactModel.findByIdAndDelete(req.params.id);
