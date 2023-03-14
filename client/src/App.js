@@ -13,7 +13,7 @@ function App() {
 
       {/*  Employment */}
       <div className="row mb-5">
-        <h1>Employee Management</h1>
+        <h1>Employee Dashboard</h1>
       </div>
       <div className="row">
         <Router>
